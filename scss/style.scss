@@ -1,0 +1,351 @@
+
+@import "_mixin.scss";
+@import "_header.scss";
+@import "footer.scss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#about{
+    background-image: url(http://tk-themes.net/html-9studio/images/background/bg_11.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    position:relative;
+    .main{
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translate(-50%,-15%);
+        h1{
+            font-size: 56px;
+            font-family: 'Merriweather', serif;
+            color: #333;
+        }
+        .pia{
+            a{
+
+                color: #ababab;
+                text-decoration: none;
+                font-size: 14px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                position: relative;
+                letter-spacing: 0.2em;
+                // padding-right: 5%;
+            }
+            i{
+                position: absolute;
+                left:23%;
+                // height: 10%;
+                bottom: 25%;
+                font-size: 100%;
+                color: #ababab;
+
+            }
+            p{
+                font-size: 14px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;                letter-spacing: 0.2em;
+                position: relative;
+                left:8%;
+                // padding-left: 5%;
+                color: #da0e2b;
+                &::before{
+                    content: "";
+                position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #da0e2b;
+                    top: 80%;
+                }
+            }
+        }
+    }
+}
+
+@include about_resp{
+    #about{
+               .main{
+                   top: 50%;
+                   left:50%;
+                   transform: translate(-50%,-50%);
+               }
+           }
+   }
+   #best{
+     padding: 8%;
+    .row{
+
+        .leftbox{
+            padding: 2%;
+            // border: 1px solid red;
+            h2{
+                font-family: 'Merriweather';
+                padding-top:5%;
+            }
+            p{
+                color: #696969;
+                padding-top:2%;
+                margin-bottom: 30px;
+                width: 100%;
+            }
+            a{
+            
+                text-decoration: none;
+                color: #da0e2b;
+                border: 1px solid #da0e2b;
+                padding: 10px 40px;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                font-family: 'Montserrat';
+                font-weight: 500;
+                transition: 0.5s ease-in-out;
+                &:hover{
+                    background-color: #da0e2b;
+                    color: white;
+                }
+            }
+        }
+        .rightbox{
+            // border: 1px solid blueviolet;
+            padding: 5%;
+            text-align: center;
+            h5{
+                padding:8% 0;
+                width: 100%;
+                color: #696969;
+                font-size: 16px;
+                font-family: 'Merriweather';
+                font-style: italic;
+                line-height: 2;
+            }
+            .spi{
+                .name{
+                    color: #696969;
+                    font-weight: 700;
+                    letter-spacing: 0.05em;
+
+                }
+                i{
+                    color: #ccc;
+                }
+                .profession{
+                    color:#ccc;
+                    
+
+                    
+                }
+                padding-bottom: 10%;
+            }
+            
+        
+
+        }
+    }
+    
+   }
+//  @include best_resp{
+
+//  }
+// best ended
+// ========================
+// creative starts
+#creative{
+    padding: 5% 8% 13% 8% ;
+    .film-stars{
+        position: relative;
+        .info{
+            .item1{
+                .photoJhon{
+                    position: absolute;
+                }
+                .personInfo1{
+                    // padding: 8%;
+                    position: absolute;
+                    top: 0;
+                    left: 28%;
+
+                    .name1{
+                        // position: relative;
+                        span{
+    
+                            font-family: 'Montserrat';
+                            font-size: 18px;
+                            font-weight: 700;
+                            color: #333;
+                            line-height: 1.8;
+                        }
+                        &:before{
+                            content: "";
+                            height: 2px;
+                            width: 50%;
+                            background-color: #da0e2b;
+                            position: absolute;
+                            top: 40%;
+                            left: -70%;
+                        }
+                    }
+                    .slashName1{
+                        color: #ccc;
+                        font-size: 14px;
+                        letter-spacing: 0.1em;
+                    }
+                }
+            }
+            .item2{
+                position: absolute;
+                top: 30%;
+                left: 25%;
+                .personInfo2{
+                    // padding: 8%;
+                    position: absolute;
+                    top: 70%;
+                    left: -100%;
+                    .name2{
+                        // position: absolute;
+                        padding-top: 20% ;
+                        span{
+    
+                            font-family: 'Montserrat';
+                            font-size: 18px;
+                            font-weight: 700;
+                            color: #333;
+                            line-height: 1.8;
+                            
+                        }
+                        &:before{
+                            content: "";
+                            height: 2px;
+                            width: 40%;
+                            background-color: #da0e2b;
+                            position: absolute;
+                            top: 55%;
+                            left: 110%;
+                        }
+                    }
+                    .slashName2{
+                        
+                        color: #ccc;
+                        font-size: 14px;
+                        letter-spacing: 0.1em;
+                    }
+                }
+            }
+            }
+            .awards{
+                h2{
+                    font-family: 'Merriweather';
+                    font-weight: 400;
+                    line-height: 1.4em;
+                    padding-bottom: 10px;
+                }
+                p{
+                    color: #696969;
+                    line-height: 1.8em;
+
+                }
+                .date{
+                    .icoBox{
+                        i{
+                            color: #da0e2b;
+                            padding: 5px;
+                        }
+                        h5{
+                            font-size: 15px;
+                            font-weight: 700;
+                            letter-spacing: 0.05em;
+                        }
+                    }
+                }
+            }
+        }
+        }
+    // creative ended
+    // =======================
+    // explore starts
+    #explore{
+        padding: 10%;
+        background-color: #f6f7f7 ;
+         .exploreServices{
+            text-align: center;
+             h3{
+                font-size: 14px;
+                letter-spacing: 0.1em;
+                font-family: 'Montserrat';
+                margin-bottom: 2%;
+                color: #da0e2b;
+             }
+             h2{
+                font-size: 35px;
+                font-family: 'Merriweather';
+                line-height: 1.4em;
+                color: #333;
+             }
+             p{
+                text-align: center;
+                color: #696969;
+                margin: auto;
+                width: 50%;
+                line-height: 1.8;
+                font-size: 15px;
+                font-weight: 400;
+                margin-bottom: 40px;
+             }
+             .boxes{
+                
+                 .box{
+                  
+                    h5{
+                        letter-spacing: 0.05em;
+                        font-size: 14px;
+                        color: #333;
+                        font-weight: 700;
+                        margin-bottom: 5%;
+                    }
+                    p{
+                        width: 90%;
+                    }
+                    i{
+                        color: #da0e2b;
+                        background-color: #F6F7F7;
+                        box-shadow: 0 0 20px 0 rgb(237, 234, 234);
+                        border-radius: 50%;
+                        padding: 3%;
+                        transition: 0.3s ease;
+                    }
+                    .imgBox{
+                        border: 1px solid #696969;
+                        background-image: url(http://tk-themes.net/html-9studio/images/icon-boxes/icon_bg_1.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        
+                        // width: 100%;
+                        // height: 100%;
+                        img{
+                            border: 1px solid aquamarine;
+                            width: 30%;
+                            // margin: auto;
+                        }
+                    }
+
+                    &:hover{
+                        i{
+                            background-color: #da0e2b;
+                            color: white;
+                        }
+                    }
+                 }
+             }
+         }
+    }
+    
+
+

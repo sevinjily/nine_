@@ -1,0 +1,266 @@
+// font-family: 'Lato', sans-serif;
+// font-family: 'Merriweather', serif;
+// font-family: 'Montserrat', sans-serif;
+
+#header {
+    width: 100%;
+    position: static;
+    z-index: 999;
+    padding: 5px 0;
+    transition: all 0.4s ease;
+    background-color: white;
+    &.active{
+        position: fixed;
+    }
+    .content {
+        width: 90%;
+        margin: auto;
+
+        .left {
+            background-image: url('http://tk-themes.net/html-9studio/images/logo_alt.png');
+
+            width: 140px;
+
+            height: 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .right {
+            height: 80px;
+            display: flex;
+
+            ul {
+                li {
+                    position: relative;
+
+                    &:hover {
+                        .dropdownMenu1 {
+                            visibility: visible;
+                            opacity: 1;
+                            top: 210%;
+                        }
+
+                        .dropdownMenu2 {
+                            visibility: visible;
+                            opacity: 1;
+                            top: 210%;
+                        }
+
+                        .dropdownMenu3 {
+                            visibility: visible;
+                            opacity: 1;
+                            top: 210%;
+                        }
+                    }
+
+                    &:first-child {
+                        a {
+                            color: red;
+                        }
+                    }
+
+                    a {
+                        padding: 30px 20px;
+                        text-decoration: none;
+                        color: black;
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+
+                        i {
+                            color: black;
+                            font-size: 14px;
+                            padding-left: 5px;
+                        }
+                    }
+
+                    .dropdownMenu1 {
+                        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.171);
+                        flex-direction: column;
+                        position: absolute;
+                        top: 250%;
+                        list-style: none;
+                        width: 180px;
+                        background-color: white;
+                        border-top: 2px solid red;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all 0.3s ease;
+                        z-index: 1000;
+
+                        li {
+                            padding: 10px 20px;
+                            border-bottom: 1px solid rgb(224, 224, 224);
+                            margin: 0 10px;
+
+                            a {
+                                color: black;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 14px;
+                                font-weight: 400;
+                                padding: 10px 5px;
+                            }
+                        }
+                    }
+
+                    .dropdownMenu2 {
+                        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.171);
+                        flex-direction: column;
+                        position: absolute;
+                        top: 250%;
+                        list-style: none;
+                        width: 180px;
+                        background-color: white;
+                        border-top: 2px solid red;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all 0.3s ease;
+                        z-index: 1000;
+
+
+                        li {
+                            padding: 10px 20px;
+                            border-bottom: 1px solid rgb(224, 224, 224);
+                            margin: 0 10px;
+
+                            a {
+                                color: black;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 14px;
+                                font-weight: 400;
+                                padding: 10px 5px;
+                            }
+                        }
+                    }
+
+                    .dropdownMenu3 {
+                        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.171);
+                        flex-direction: column;
+                        position: absolute;
+                        top: 250%;
+                        list-style: none;
+                        width: 180px;
+                        background-color: white;
+                        border-top: 2px solid red;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all 0.3s ease;
+                        z-index: 1000;
+
+
+                        li {
+                            padding: 10px 20px;
+                            border-bottom: 1px solid rgb(224, 224, 224);
+                            margin: 0 10px;
+
+                            a {
+                                color: black;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 14px;
+                                font-weight: 400;
+                                padding: 10px 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            a {
+                i {
+                    color: white;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .slide-menu {
+
+            display: none;
+
+        }
+    }
+
+
+}
+
+@media (max-width: 992px) {
+    #header {
+        width: 100%;
+        position: static;
+
+        .content {
+
+            // width: 100%;
+            .left {
+                background-image: url('http://tk-themes.net/html-9studio/images/logo_alt.png');
+            }
+
+            .right {
+                display: none;
+            }
+
+            .slide-menu {
+                display: block;
+
+                .btnOpen {
+                    font-size: 20px;
+                    color: black;
+                }
+
+                .menu {
+                    z-index: 999;
+                    position: fixed;
+                    background: white;
+                    width: 30vw;
+                    height: 100vh;
+                    top: 0;
+                    left: 0;
+                    transform: translateX(-100%);
+                    transition: all 0.4s ease;
+
+                    &.active {
+                        transform: translateX(0);
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+
+                        li {
+                            width: 100%;
+
+                            a {
+                                font-family: 'Lato', sans-serif;
+                                font-size: 12px;
+                                text-decoration: none;
+                                color: #5e5a54;
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                border-bottom: 1px solid rgba(128, 128, 128, 0.336);
+                                padding: 15px;
+                                justify-content: space-between;
+
+                                i {
+                                    // background-color: rgb(189, 189, 189);
+                                    // padding: 10px;
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+
+                        .accordion1{
+                            transition: all 0.4s ease;
+                            display: none;
+                            &.active{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

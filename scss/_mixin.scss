@@ -1,0 +1,23 @@
+@mixin about_resp{
+
+    @media only screen and (max-width:768px){
+        @content;
+       
+        
+    }
+}
+@mixin best_resp{
+
+    @media only screen and (min-width:991px){
+        @content;
+       
+        
+    }
+}
+
+@mixin creative_resp{
+    @media only screen and (max-width:768px){
+        @content;
+        
+    }
+}
